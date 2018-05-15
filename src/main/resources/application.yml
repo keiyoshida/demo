@@ -1,0 +1,16 @@
+app:
+  name: demo
+  home: C:\${app.name}
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:C:\demo\db\demo;MODE=PostgreSQL
+    username: sa
+    password: 
+    
+server:
+  port: 8085
