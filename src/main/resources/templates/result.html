@@ -25,18 +25,18 @@
             <tbody>
               <tr th:each="sentence : ${sentences}">
                 <td>
-                  <span th:text="${sentence.main_text}"></span>
+                  <span th:text="${sentence.mainText}"></span>
                   <br>
-                  <span th:text="${sentence.first_text}"></span>
-                  <input type="hidden" name="sentenceSecond" th:value="${sentence.second_text}" />
-                  <input type="hidden" name="sentenceFirst" th:value="${sentence.first_text}" />
-                  <input type="hidden" name="sentenceMain" th:value="${sentence.main_text}" />
+                  <span th:text="${sentence.firstText}"></span>
+                  <input type="hidden" name="sentenceSecond" th:value="${sentence.secondText}" />
+                  <input type="hidden" name="sentenceFirst" th:value="${sentence.firstText}" />
+                  <input type="hidden" name="sentenceMain" th:value="${sentence.mainText}" />
                   <input type="hidden" name="sentenceId" th:value="${sentence.id}" />
                   <div th:switch="${sentence.result}">
                     <input th:case="true" type="text" name="answer" th:value="${sentence.right_answer}" />
                     <input th:case="false" type="text" name="answer" th:value="${sentence.right_answer}" style="color:#FF0000"/>
                   </div>
-                  <span th:text="${sentence.second_text}"></span>
+                  <span th:text="${sentence.secondText}"></span>
                 </td>
               </tr>
             </tbody>
